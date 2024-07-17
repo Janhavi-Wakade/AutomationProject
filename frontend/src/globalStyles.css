@@ -1,0 +1,10 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* background: linear-gradient(to bottom, #000080, #000000); Dark blue to black gradient */
+    /* background: linear-gradient(to bottom, #78bb99, #2c3534); */
+    background: white;
+    color: #ffffff; /* White text color */
+  }
+  

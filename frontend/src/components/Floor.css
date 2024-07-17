@@ -1,0 +1,30 @@
+.floor {
+    height: 13vh;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin-top: 30px;
+    margin-bottom: 12vh;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+  }
+  .floor-on{
+    background-color: #a9b8e2;
+  }
+  .floor-off{
+    background-color: #3d4a6e;
+  }
+  
+  
+  .response-message {
+    padding-top: 10px;
+    font-style: italic;
+    color: #666;
+  }
+  .maindiv{
+    background-color: linear-gradient(to bottom, #000080, #000000);
+  }

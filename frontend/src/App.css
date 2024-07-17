@@ -1,0 +1,41 @@
+header {
+  background-color: #486e5b;
+  padding: 10px;
+}
+body{
+  /* background-color: #486e5b; */
+  background-image: url('../public/opt3.png');
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Use flexbox */
+}
+
+nav ul li {
+  margin-right: 10px; /* Optional margin between items */
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Remove margin from the last item */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 8px 15px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #74a38c;
+}
+
+/* Optional: Make the links occupy equal space */
+nav ul li {
+  flex: 1;
+  text-align: center;
+}
