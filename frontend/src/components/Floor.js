@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Buttons from './Buttons';
-// import './Floor.css';
+import './Floor.css';
 
 const Floor = () => {
   const [buttonState1, setButtonState1] = useState(null);
@@ -63,8 +63,10 @@ const Floor = () => {
   
 
   return (
+    <div className='outside-div'>
     <div className='maindiv'>
       <div className={`floor ${buttonState1 == 'ON' ? 'floor-on' : 'floor-off'}`}>
+        {/* <div className='circle1'></div> */}
         <h2>First Floor</h2>
         <Buttons buttonId="1a" initialButtonState={buttonState1} onStateChange={handleStateChange} />
       </div>
@@ -76,6 +78,8 @@ const Floor = () => {
         <h2>Third Floor</h2>
         <Buttons buttonId="3a" initialButtonState={buttonState3} onStateChange={handleStateChange} />
       </div>
+    </div>
+    <div className='building'></div>
     </div>
   );
 };

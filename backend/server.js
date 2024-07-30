@@ -4,12 +4,14 @@ const mongoose = require('mongoose');
 const mqtt = require('mqtt');
 const cors = require('cors');
 const Button = require('./models/Buttonschema');
+const User = require('./models/UserSchema');
 
 require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 5000;
-const mqttBrokerUrl = 'mqtt://172.20.10.7';
+const mqttBrokerUrl = 'mqtt://103.217.139.171';
+const host = '0.0.0.0';
 
 const MONGODB_URI = process.env.MONGODB_URI;
 mongoose.connect(MONGODB_URI, {
@@ -24,9 +26,9 @@ const mqttClient = mqtt.connect(mqttBrokerUrl);
 mqttClient.on('connect', function () {
     console.log('Connected to MQTT broker');
 
-    client.subscribe('lightswitch1');
-    client.subscribe('lightswitch2');
-    client.subscribe('lightswitch3');
+    // client.subscribe('lightswitch1');
+    // client.subscribe('lightswitch2');
+    // client.subscribe('lightswitch3');
 });
 
 //for incoming messages
@@ -103,8 +105,8 @@ app.put('/api/buttons/:idschema', async (req, res) => {
 
 app.get('/api/buttons', async (req, res) => {
     try {
-      const buttons = await Button.find(); // Fetch all buttons from MongoDB
-      res.json(buttons); // Send the buttons as JSON response
+      const buttons = await Button.find(); 
+      res.json(buttons); 
     
     } catch (err) {
       console.error('Error fetching buttons:', err);
@@ -127,7 +129,16 @@ app.get('/api/button/:buttonId', async (req, res) => {
         res.status(500).json({ error: 'Server error' });
     }
 });
-
-app.listen(port, () => {
+app.get('/api/auth', async (req, res) => {
+    console.log("here");
+    try {
+      const cred = await User.find(); 
+      res.json(cred); 
+    } catch (err) {
+      console.error('Error fetching credentials:', err);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  });
+app.listen(port,host, () => {
     console.log(`Server is running on http://localhost:${port}`);
 });

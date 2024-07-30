@@ -1,25 +1,21 @@
 header {
-  background-color: #486e5b;
-  padding: 10px;
+  background: #1b73a5;
+  padding: 2px;
+  display: flex;
+  height:15%;
+  width: 100%;
 }
-body{
-  /* background-color: #486e5b; */
-  background-image: url('../public/opt3.png');
+nav{
+  width: 100%;
 }
-
 nav ul {
-  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
   padding: 0;
-  margin: 0;
-  display: flex; /* Use flexbox */
-}
-
+  margin: 0;}
 nav ul li {
-  margin-right: 10px; /* Optional margin between items */
-}
-
-nav ul li:last-child {
-  margin-right: 0; /* Remove margin from the last item */
+  margin: 0;
 }
 
 nav ul li a {
@@ -30,8 +26,18 @@ nav ul li a {
   transition: background-color 0.3s ease;
 }
 
+.nav-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
 nav ul li a:hover {
-  background-color: #74a38c;
+  background-color: #75b5da;
 }
 
 /* Optional: Make the links occupy equal space */

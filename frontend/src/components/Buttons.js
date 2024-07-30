@@ -13,7 +13,7 @@ const Buttons = ({ buttonId, initialButtonState, onStateChange }) => {
 
   return (
     <div>
-      <button className={`switch-button ${buttonState}`} onClick={handleClick}>
+      <button className='switch-button' onClick={handleClick}>
         {testVariable?(initialButtonState==='ON'?'OFF':'ON'):initialButtonState}
       </button>
     </div>

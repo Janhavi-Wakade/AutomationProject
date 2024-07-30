@@ -1,0 +1,154 @@
+  body {
+    color: black;
+    /* background: #1b73a5; */
+    /* background: linear-gradient(90deg, rgba(0,212,255,1) 0%, rgba(6,2,71,0.9416141456582633) 0%, rgba(2,0,36,1) 100%);
+    font-family: Arial, sans-serif; */
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    
+
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    background-position: right top; /* Align background to the right center */
+    background-size: contain; /* Ensure the background covers the entire area */
+
+
+}
+.outerDiv{
+  width:100%;
+  height: 100vh;
+    display: flex;
+  justify-content: space-evenly;
+  background-image: url(../../public/glow.avif);
+  background-repeat: no-repeat;
+  background-position:center;
+}
+
+
+
+.RightDiv{
+
+  background-image: url(../../public/bulb6.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center-top;
+    align-items: center;
+    width: 100vh;
+  margin-top: 80px;
+  padding: 2px;
+    box-sizing: border-box;
+    box-shadow: 20px,50px,100px,black;
+}
+.formdesign{
+  display: flex;
+  width: 100%;
+  height: 55%;
+  justify-content: space-evenly;
+  border-radius: 1%;
+  background: rgba(255, 255, 255);
+padding: 20px;
+box-sizing: border-box;
+
+}
+.leftform h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.leftform label {
+    display: block;
+    margin-bottom: 5px;
+    width: 500px;
+}
+
+.leftform input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #75b5da;
+}
+
+.leftform button {
+    /* width: 15%; */
+    padding: 10px;
+    margin-top: 0px;
+    background-color: #65b5c4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.leftform button:hover {
+    background-color: #1b73a5;
+}
+
+.leftform h4 {
+    color: red;
+    margin-top: 1px;
+    margin-bottom: 4px;
+}
+.leftform{
+  width: 60%;
+}
+.bulb{
+  display: flex;
+  width: 40%;
+  height: 100%;
+  background-image: url(../../public/bulb5.png);
+  background-size: cover;
+}
+/* Responsive adjustments for login container only */
+@media (max-width: 600px) {
+    .flex-container {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .flex-container h2 {
+        font-size: 20px;
+    }
+
+    .flex-container input, .flex-container button {
+        padding: 10px;
+    }
+    .bulb{
+        width: 0%;
+    }
+}
+
+@media (max-width: 400px) {
+    .flex-container {
+        padding: 10px;
+        width: 90%;
+        font-size: 18px;
+    }
+
+    .flex-container label {
+        font-size: 10px;
+    }
+
+    .flex-container h2 {
+        font-size: 18px;
+    }
+
+    .flex-container input {
+        padding: 8px;
+    }
+
+    .flex-container button {
+        padding: 8px;
+        margin-top: 0;
+    }
+    .bulb{
+        width: 0px;
+    }
+}

@@ -1,20 +1,19 @@
 .switch-button {
-    background-color: #3c9c6c;
+    background-color: #ad478b;
     color: white; 
     padding: 15px 32px; 
     text-align: center;
     font-size: 16px;  
     margin-right: none;
     cursor: pointer; 
-    border-radius: 8px; 
+    border-radius: 10px; 
     border: none; 
 }
 .switch-button:hover {
-    background-color: #486e5b; 
+    background-color: #5f1a54; 
 }
 
 .switch-button:active {
-    background-color: #000000; 
     transform: translateY(2px);
 }
 
